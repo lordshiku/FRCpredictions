@@ -1,11 +1,11 @@
-**FRC Match Outcome Prediction (matches from 2023) – ML Classification**
-**Project Overview**
+**FRC Match Outcome Prediction (matches from 2023) – ML Classification**  
+**Project Overview**  
 This project applies machine learning classification to predict the outcome of FIRST Robotics Competition (FRC) 3v3 matches for the 2023 season. Using match data from The Blue Alliance API, I collected and processed thousands of matches, creating a dataset that enables real-time, blind prediction of whether the blue or red alliance will win.
-
-**Quick Summary**
+  
+**Quick Summary**  
 Predicted the rate at which blue alliance would win with a peak of 80.07% accuracy over hundreds of matches using logistic regression on a train test paradigm.
 The model has been posted to chiefDeplhi in order to give teams around the globe access to these accurate *live* predictions.
-
+  
 **Data Collection & Feature Engineering**
 1. Data Retrieval
 Used The Blue Alliance API (handled in dataHolder files) to extract raw match data.
