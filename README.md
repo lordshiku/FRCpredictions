@@ -6,7 +6,8 @@ This project applies machine learning classification to predict the outcome of F
   
 **Quick Summary**    
 
-Predicted the rate at which blue alliance would win with a peak of 80.07% accuracy over hundreds of matches using logistic regression on a train test paradigm.  
+Predicted the rate at which blue alliance would win with a peak of 80.07% accuracy over hundreds of matches using logistic regression on a train test paradigm.   
+These prediction results actually outpace the models put out by statbotics for example, on the same competitions. Try it yourself!   
 The model has been posted to chiefDeplhi in order to give teams around the globe access to these accurate *live* predictions.  
 As of now, at least 5-10 teams have at least tried it out and found useful, correct predictions in the 2025 season.    
   
