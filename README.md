@@ -1,14 +1,17 @@
-**FRC Match Outcome Prediction (matches from 2023) – ML Classification**  
+**FRC Match Outcome Prediction (matches from 2023, released jan 2025) – ML Classification**  
   
-**Project Overview**  
+**Project Overview**    
+
 This project applies machine learning classification to predict the outcome of FIRST Robotics Competition (FRC) 3v3 matches for the 2023 season. Using match data from The Blue Alliance API, I collected and processed thousands of matches, creating a dataset that enables real-time, blind prediction of whether the blue or red alliance will win.
   
-**Quick Summary**  
+**Quick Summary**    
+
 Predicted the rate at which blue alliance would win with a peak of 80.07% accuracy over hundreds of matches using logistic regression on a train test paradigm.  
 The model has been posted to chiefDeplhi in order to give teams around the globe access to these accurate *live* predictions.  
 As of now, at least 5-10 teams have at least tried it out and found useful, correct predictions in the 2025 season.    
   
-**Data Collection & Feature Engineering**
+**Data Collection & Feature Engineering**  
+
 1. Data Retrieval
 Used The Blue Alliance API (handled in dataHolder files) to extract raw match data.
 2. Key Predictive Metrics
@@ -25,6 +28,7 @@ Each metric is calculated as:
 blue alliance’s average value - red alliance’s average value  
 
 **3. Calculation Breakdown Example: scorediff**  
+  
 For match n, scorediff is calculated by:  
   
 Finding each individual team’s average past match score (before match n). Summing these averages for the three blue alliance teams. Summing these averages for the three red alliance teams. Taking the difference: scorediff  
@@ -91,6 +95,7 @@ The dataset was used to train and evaluate multiple classification models in R (
 
   
 **Model	Accuracy (%)**  
+  
 Note: in order to reproduce the same model with the same results, ensure that your random seed in the R file is identical to mine.
 Logistic Regression	80.07 (Best)
 Linear Discriminant Analysis (LDA)	78.6
@@ -101,6 +106,7 @@ Hyperparameter tuning was performed where applicable.
 Logistic regression achieved the best accuracy (80.07%), demonstrating that the predictive metrics were well-structured for classification.
 
 **Files & Structure**  
+  
 dataHolderLarge.py – Handles API calls to collect match data.
 allRcode.R – Performs Exploratory Data Analysis (EDA) to determine the most predictive features.
 csvCreatorLarge.py – Processes raw data and generates the dataset used for model training.
@@ -108,6 +114,7 @@ allRcode.R – Implements machine learning classification models, evaluates diff
 Some of the exact json files I pulled, and csvs I used, are included in the git to see.
 
 **Key Results & Insights**  
+  
 Logistic regression provided the best accuracy (80.07%), making it the most effective model for match outcome classification.
 Scorediff, rpdiff, and lastfive were the strongest predictive features.
 The methodology ensures live, blind predictions, making it possible to forecast match results in real-time using only prior match data.
