@@ -90,6 +90,7 @@ The dataset was used to train and evaluate multiple classification models in R (
 
   
 **Model	Accuracy (%)**  
+Note: in order to reproduce the same model with the same results, ensure that your random seed in the R file is identical to mine.
 Logistic Regression	80.07 (Best)
 Linear Discriminant Analysis (LDA)	78.6
 Quadratic Discriminant Analysis (QDA)	75.3
@@ -103,6 +104,7 @@ dataHolderLarge.py – Handles API calls to collect match data.
 allRcode.R – Performs Exploratory Data Analysis (EDA) to determine the most predictive features.
 csvCreatorLarge.py – Processes raw data and generates the dataset used for model training.
 allRcode.R – Implements machine learning classification models, evaluates different methods, and determines the best-performing approach.
+Some of the exact json files I pulled, and csvs I used, are included in the git to see.
 
 **Key Results & Insights**  
 Logistic regression provided the best accuracy (80.07%), making it the most effective model for match outcome classification.
